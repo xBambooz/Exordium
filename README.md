@@ -2,6 +2,17 @@
 
 # Exordium
 
+## Unofficial Fabric 26.3 port
+
+This is an unofficial Minecraft 26.3 Fabric port by xBambooz of
+[Exordium by tr7zw](https://github.com/tr7zw/Exordium). The HUD redraw rate is
+fixed at 30 FPS. There is no config UI and no Xaero hooks. Open screens remain
+uncached. The compatibility notes below describe upstream, not verified 26.3 support.
+See [port details](PORT-26.3.md) and [validation](VALIDATION.md).
+
+Build with Java 25: `./gradlew build --no-daemon`. Downloads are available in
+[Releases](https://github.com/xBambooz/Exordium/releases).
+
 __Render the HUD and screens at a lower framerate to speed up what's really important: the worldrendering.__
 
 Renders the HUD at a lower fixed framerate (configurable in the settings), freeing up CPU and GPU time for the world rendering. There is no good reason to render the hotbar at 100+ FPS.
@@ -50,7 +61,5 @@ This feature is still not done (disabled by default) and has mainly transparency
 
 ## License
 
-This project is licensed under [``tr7zw Protective License``](LICENSE).
-This license does not allow others to distribute the software/derivative works(in source or binary form).
-You have to contact the author to get permission for redistribution. (For example: Modpacks(that are not hosted on CurseForge), "Clients", mod hosting sites).
-Keep in mind that [Githubs TOS](https://docs.github.com/en/github/site-policy/github-terms-of-service#d-user-generated-content) and [Overwolfs TOS](https://www.overwolf.com/legal/terms/) apply at their respective places. This (among other things) means you don't need to ask to include the mod in a CurseForge Modpack and that by contributing code it explicitly gets the same license as the repository.
+This project is licensed under the [GNU Lesser General Public License v3](LICENSE).
+Upstream copyright and license notices are retained.
