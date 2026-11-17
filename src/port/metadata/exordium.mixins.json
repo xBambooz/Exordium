@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "dev.tr7zw.exordium.port",
+  "compatibilityLevel": "JAVA_25",
+  "client": ["GuiRendererMixin"],
+  "injectors": {"defaultRequire": 1}
+}

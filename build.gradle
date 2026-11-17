@@ -1,0 +1,43 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.18.2'
+}
+
+version = '2.1.1+26.3'
+group = 'dev.tr7zw.exordium'
+
+dependencies {
+    minecraft 'com.mojang:minecraft:26.3'
+    implementation 'net.fabricmc:fabric-loader:0.20.0'
+}
+
+sourceSets.main {
+    java.setSrcDirs(['src/port/java'])
+    resources.setSrcDirs(['src/port/resources'])
+    resources.srcDir('src/main/resources')
+    resources.exclude('fabric.mod.json', 'exordium.mixins.json')
+}
+
+processResources {
+    from('src/port/metadata') {
+        expand(version: project.version)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+}
+java { withSourcesJar() }
+jar { from('LICENSE') }
+
+sourceSets {
+    validation {
+        java.srcDir('tools/fixture/java')
+        resources.srcDir('tools/fixture/resources')
+        compileClasspath += sourceSets.main.compileClasspath
+    }
+}
+tasks.register('validationJar', Jar) {
+    archiveFileName = 'exordium-validation.jar'
+    destinationDirectory = layout.buildDirectory.dir('validation')
+    from(sourceSets.validation.output)
+}

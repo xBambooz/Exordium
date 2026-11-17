@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "exordium",
+  "version": "${version}",
+  "name": "Exordium",
+  "description": "Caches the HUD at 30 FPS.",
+  "authors": ["tr7zw", "katietheqt"],
+  "license": "GPL-3.0-only",
+  "environment": "client",
+  "icon": "icon.png",
+  "contact": {"sources": "https://github.com/tr7zw/Exordium"},
+  "mixins": ["exordium.mixins.json"],
+  "depends": {"fabricloader": ">=0.20.0", "minecraft": "26.3", "java": ">=25"}
+}

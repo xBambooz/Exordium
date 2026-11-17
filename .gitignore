@@ -53,3 +53,8 @@ src/main/neoforge-resources/META-INF/neoforge.mods.toml
 src/main/java/dev/tr7zw/config/**
 src/main/java/dev/tr7zw/util/**
 pmd-rules.xml
+!build.gradle
+!settings.gradle
+!gradle/wrapper/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
